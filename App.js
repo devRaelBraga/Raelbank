@@ -1,20 +1,31 @@
-import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+import { NavigationContainer } from '@react-navigation/native';
+import { StyleSheet, View } from 'react-native';
+import { createNativeStackNavigator } from '@react-navigation/native-stack';
+import Login from './src/Views/login';
+import Cadastro from './src/Views/cadastro';
+import Home from './src/Views/home';
+import Perfil from './src/Views/perfil';
+
+const Stack = createNativeStackNavigator();
 
 export default function App() {
   return (
-    <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
-      <StatusBar style="auto" />
+    <View style={{ flex: 1, backgroundColor: '#242424' }}>
+    <NavigationContainer>
+      <Stack.Navigator screenOptions={{headerShown: false}}>
+          <Stack.Screen name="Login" component={Login} options={{ cardStyleInterpolator: forFade }} />
+          <Stack.Screen name="Cadastro" component={Cadastro} options={{ cardStyleInterpolator: forFade }} />
+          <Stack.Screen name="Home" component={Home} options={{ cardStyleInterpolator: forFade }} />
+          <Stack.Screen name="Perfil" component={Perfil} options={{ cardStyleInterpolator: forFade }} />
+      </Stack.Navigator>
+    </NavigationContainer>
     </View>
   );
 }
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
+
+const forFade = ({ current, closing }) => ({
+  cardStyle: {
+    opacity: current.progress,
   },
 });

@@ -1,15 +1,15 @@
 {
   "expo": {
-    "name": "teste",
-    "slug": "teste",
+    "name": "Raelbank",
+    "slug": "Raelbank",
     "version": "1.0.0",
     "orientation": "portrait",
-    "icon": "./assets/icon.png",
-    "userInterfaceStyle": "light",
+    "icon": "./assets/logofull.png",
+    "userInterfaceStyle": "dark",
     "splash": {
-      "image": "./assets/splash.png",
+      "image": "./assets/logofull.png",
       "resizeMode": "contain",
-      "backgroundColor": "#ffffff"
+      "backgroundColor": "#242424"
     },
     "updates": {
       "fallbackToCacheTimeout": 0
@@ -22,12 +22,18 @@
     },
     "android": {
       "adaptiveIcon": {
-        "foregroundImage": "./assets/adaptive-icon.png",
-        "backgroundColor": "#FFFFFF"
-      }
+        "foregroundImage": "./assets/logo.png",
+        "backgroundColor": "#242424"
+      },
+      "package": "com.raelb.raelbank"
     },
     "web": {
-      "favicon": "./assets/favicon.png"
+      "favicon": "./assets/icon.png"
+    },
+    "extra": {
+      "eas": {
+        "projectId": "23f8d821-1bb1-45da-ab55-ecbf505808e3"
+      }
     }
   }
 }
