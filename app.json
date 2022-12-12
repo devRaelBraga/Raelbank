@@ -4,10 +4,10 @@
     "slug": "Raelbank",
     "version": "1.0.0",
     "orientation": "portrait",
-    "icon": "./assets/logofull.png",
+    "icon": "./assets/logo.png",
     "userInterfaceStyle": "dark",
     "splash": {
-      "image": "./assets/logofull.png",
+      "image": "./assets/logo.png",
       "resizeMode": "contain",
       "backgroundColor": "#242424"
     },
