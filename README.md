@@ -45,6 +45,7 @@ $ yarn dev
 
 ## - Build apk
 
+- sign-up on expo then follow [this guide](https://docs.expo.dev/build/setup/) to install and configure eas-cli
 - command line to build apk:
 
 ~~~~powershell
@@ -58,7 +59,7 @@ $ eas build -p android --profile preview
 
 - First, install [Expo Go](https://play.google.com/store/apps/details?id=host.exp.exponent&hl=pt_BR&gl=US&pli=1) on your SmartPhone.
 
-- Configure .env:
+- Configure .env:<br/>
 ![.env client](https://i.imgur.com/LklpXgR.png)
 
 - Start the Expo server:
