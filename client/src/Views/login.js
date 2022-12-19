@@ -11,7 +11,7 @@ export default function Login({navigation}){
 
         <TextInput style={styles.input} placeholder='digite sua senha...'   placeholderTextColor='#5b5b5b'></TextInput>
 
-        <TouchableHighlight style={styles.botao} onPress={() => navigation.navigate('Home')} activeOpacity={1} underlayColor="#707CEA">
+        <TouchableHighlight style={styles.botao} onPress={() => navigation.navigate('Menu')} activeOpacity={1} underlayColor="#707CEA">
             <Text style={styles.text}>Login</Text>
         </TouchableHighlight>
         <View style={styles.link}>

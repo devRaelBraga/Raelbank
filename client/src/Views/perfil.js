@@ -1,10 +1,9 @@
 import { View, Text, StyleSheet, TouchableOpacity, Image } from "react-native";
-import Navbar from "../Components/navbar";
 const backgroundColor = '#fff';
 const mainColor = '#242424';
 
 
-export default function Perfil({navigation}){
+export default function Profile({navigation}){
     const name = 'Hisrael';
     const saldo = 283.99
     const conta = '212.838.9093.394-2'
@@ -37,15 +36,6 @@ export default function Perfil({navigation}){
                     <Text style={{color: 'red', fontSize: 20}}>Logout</Text>
                 </TouchableOpacity>
                 </View>
-            </View>
-
-
-
-
-            <View style={styles.view3}>
-
-                <Navbar navigation={navigation}></Navbar>
-
             </View>
         
     </View>

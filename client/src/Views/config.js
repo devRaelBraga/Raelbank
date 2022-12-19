@@ -28,10 +28,6 @@ export default function Config({navigation}){
 
             </View>
             </View>
-
-            <View style={styles.navbar}>
-                <Navbar navigation={navigation}></Navbar>
-            </View>
         </View>
     );
 }

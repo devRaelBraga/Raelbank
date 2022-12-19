@@ -9,7 +9,7 @@ const backgroundColor = '#fff';
 const mainColor = '#242424';
 
 
-export default function Home({navigation}){
+export default function HomeTest({navigation}){
     const name = 'Hisrael';
     const saldo = 'R$ 283,99';
     
@@ -19,13 +19,12 @@ export default function Home({navigation}){
     <View style={styles.container}>
         <View style={styles.view1}>
 
-            <View style={{flex:1, flexDirection: 'row', alignItems: 'baseline', marginBottom: 20}}>
-                <Image source={require('../../assets/logo.png')} style={{width: 70, height: 70, marginLeft: 30}}></Image>
-                <Text style={{color: 'white', fontSize: 30, marginLeft: 10}}>Olá, {name}</Text>
-            </View>
-            <View style={{alignItems: 'center', width:'100%'}}>
+            <View style={{flexDirection: 'row', alignItems: 'center', marginBottom: 0}}>
+                <Image source={require('../../assets/logo.png')} style={{width: 70, height: 70, marginLeft: 30, marginRight: 30}}></Image>
+            <View style={{alignItems: 'flex-start'}}>
+                <Text style={{color: 'white', fontSize: 30, marginLeft: 0}}>Olá, {name}</Text>
                 <Text style={{color: 'white', fontSize: 30, fontWeight: 'bold'}}>{saldo}</Text>
-
+            </View>
             </View>
 
             <View style={styles.view11}>
@@ -63,7 +62,7 @@ const styles = StyleSheet.create({
     },
     view1: {
         paddingTop: 50,
-        flex: 0.5,
+        flex: 0.35,
         backgroundColor: mainColor,
         color: 'white',
         flexDirection: 'column',
