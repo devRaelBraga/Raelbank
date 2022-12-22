@@ -14,8 +14,8 @@ export default function Transaction({quantia, destino, tipo}){
             </View>
 
 
-            <View style={{flexDirection: 'row', marginLeft: '2.5%', width: "95%", alignItems: 'center', height: '100%'}}>
-                <View style={{backgroundColor: '#dedede', padding: 15, borderRadius: 50, marginLeft: 5, marginTop: 0}}>
+            <View style={{flexDirection: 'row', maarginLeft: '2.5%', width: "95%", alignItems: 'center', height: '100%'}}>
+                <View style={{backgroundColor: '#dedede', padding: 15, borderRadius: 50, marginLeft: 15, marginTop: 0}}>
                     <Image source={src} style={styles.img}></Image>
                 </View>
                 <View>

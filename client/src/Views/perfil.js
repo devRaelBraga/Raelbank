@@ -1,4 +1,5 @@
 import { View, Text, StyleSheet, TouchableOpacity, Image } from "react-native";
+import ProfileData from "../Components/profiledata";
 const backgroundColor = '#fff';
 const mainColor = '#242424';
 
@@ -13,31 +14,37 @@ export default function Profile({navigation}){
         <View style={styles.container}>
 
 
+            <View style={styles.view1}>
+                <View style={{width: '100%', alignItems: 'center', paddingTop: 25}}>
+                    <Image source={require('../../assets/me.jpeg')} style={styles.img}></Image>
+                    <Text style={{color: 'white'}}>Conta: {conta}</Text>
+                    <Text style={{color: 'white'}}>Agência: 001</Text>
+                    <Text style={{color: 'white'}}>RaelBank</Text>
+                </View>
+            </View>
+
+
             <View style={styles.view2}>
 
-
-                <View style={{width: '100%', alignItems: 'center', paddingTop: 80}}>
-                    <Image source={require('../../assets/me.jpeg')} style={styles.img}></Image>
-                    <Text>Conta: {conta}</Text>
-                    <Text>Agência: 001</Text>
-                    <Text>RaelBank</Text>
+                <View style={{width: '100%', backgroundColor: '#f0f0f5'}}>
+                    <ProfileData label={'Nome'} value={'Hisrael da Silva Braga'} changeable={'true'}></ProfileData>
+                    <ProfileData label={'Email'} value={'hisraelc@gmail.com'} changeable={'true'}></ProfileData>
+                    <ProfileData label={'Data de Nascimento'} value={'23/02/2003'}></ProfileData>
+                    <ProfileData label={'Membro desde'} value={'12/12/2022'}></ProfileData>
                 </View>
+            </View>
 
 
-                <View style={{marginLeft:0, marginTop: 50, alignItems: 'center'}}>
-                    <Text style={{color: 'black', fontSize: 25}}>Hisrael da Silva Braga</Text>
-                    <Text style={{color: 'black', fontSize: 20}}>hisraelc@gmail.com</Text>
-                    <Text style={{color: 'black', fontSize: 20}}>19 anos</Text>
-                    <Text style={{color: 'black', fontSize: 20}}>Membro desde 12/12/2022</Text>
+            <View style={styles.view3}>
                 <TouchableOpacity>
                     <Text style={{color: 'gray', fontSize: 20}}>Redefinir senha</Text>
                 </TouchableOpacity>
                 <TouchableOpacity onPress={() => navigation.navigate('Login')} activeOpacity={1} underlayColor="#707CEA">
                     <Text style={{color: 'red', fontSize: 20}}>Logout</Text>
                 </TouchableOpacity>
-                </View>
             </View>
-        
+
+
     </View>
     );
 }
@@ -46,43 +53,31 @@ export default function Profile({navigation}){
 const styles = StyleSheet.create({
     container:{
         flex: 1,
-        backgroundColor: {backgroundColor},
+        backgroundColor: '#f0f0f5',
         flexDirection: 'column',
     },
     view1: {
-        paddingTop: 70,
-        flex: 1.8,
-        backgroundColor: mainColor,
-        color: 'white',
-        flexDirection: 'column',
-        height: '33%',
-        width: '100%',
-        borderBottomLeftRadius: 15,
-        borderBottomRightRadius: 15,
-      },
-      view11:{
-        flex:1,
-        flexDirection: 'row',
-        alignItems: 'center',
-        marginTop: 20,
-        justifyContent: 'space-around'
-      },
-    view2: {
         paddingTop: 20,
-        flex: 9,
-        backgroundColor: backgroundColor,
+        flex: 5,
+        backgroundColor: '#242424',
         color: 'white',
         flexDirection: 'column',
-        height: '33%',
         width: '100%',
-      },
+        borderBottomLeftRadius: 10,
+        borderBottomRightRadius: 10,
+    },
+    view2: {
+        flexDirection: 'row',
+        flex:5
+    },
     view3: {
-        flex: 0.9,
-      },
-    Hisrael: {
-      color: '#fff',
-      fontSize: 50,
-      marginBottom: 20
+        flex:1.5,
+        paddingTop: 30,
+        paddingBottom: 50,
+        alignItems: 'center',
+        backgroundColor: '#f0f0f5',
+        borderTopWidth: 2,
+        borderTopColor: '#e6e6e6',
     },
     img: {
         width:150,
@@ -90,5 +85,6 @@ const styles = StyleSheet.create({
         marginBottom: 5,
         borderRadius: 10000000, 
         borderColor: 'gray', 
-        borderWidth: 2}
+        borderWidth: 2
+    },
 })
