@@ -6,7 +6,7 @@ import Ionicons from 'react-native-vector-icons/Ionicons';
 export default function Header({texto, destino, navigation}){
     return(
         <View style={styles.view1}>
-            <View style={{width: '33%'}}>
+            <View style={styles.seta}>
                 <TouchableOpacity onPress={() => navigation.navigate(destino)} activeOpacity={1}>
                     <Ionicons name={'arrow-back-outline'} size={40} color={'white'}/>
                 </TouchableOpacity>
@@ -21,7 +21,6 @@ const styles = StyleSheet.create({
         position: 'absolute',
         flexDirection: 'row',
         alignItems: 'center',
-        paddingLeft: 20,
         elevation: 20,
         width: '100%',
         height: 80,
@@ -29,7 +28,16 @@ const styles = StyleSheet.create({
     },
     title:{
         color: 'white',
-        fontSize: 25
+        fontSize: 25,
+        textAlign: 'center',
+        width: '100%'
+    },
+    seta:
+    {
+        position: 'absolute', 
+        top: 20, 
+        left: 20, 
+        zIndex: 2
     },
 })
 

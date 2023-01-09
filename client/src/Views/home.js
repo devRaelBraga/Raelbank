@@ -6,39 +6,51 @@ import Transaction from "../Components/transaction";
 const data = [
   {
   destino: 'Hisrael',
-  quantia: '123213',
-  tipo: 'dado',
+  quantia: '15,13',
+  tipo: 'recebida',
   id: 'asdasd3213213as'
 },
-{
-  destino: 'dado',
-  quantia: 'dado',
-  tipo: 'dado',
-  id: 'asdasd123213as'
+  {
+  destino: 'Hisrael',
+  quantia: '15,13',
+  tipo: 'enviada',
+  id: 'asdaas13as'
 },
-{
-  destino: 'dado',
-  quantia: 'dado',
-  tipo: 'dado',
-  id: 'asdsssasdas'
+  {
+  destino: 'Hisrael',
+  quantia: '15,13',
+  tipo: 'recebida',
+  id: 'asdasd3d213as'
 },
-{
-  destino: 'dado',
-  quantia: 'dado',
-  tipo: 'dado',
-  id: 'asdasdasdsadas'
+  {
+  destino: 'Hisrael',
+  quantia: '15,13',
+  tipo: 'enviada',
+  id: 'aasde213as'
 },
-{
-  destino: 'dado',
-  quantia: 'dado',
-  tipo: 'dado',
-  id: 'asdasddsadsaas'
+  {
+  destino: 'Hisrael',
+  quantia: '15,13',
+  tipo: 'recebida',
+  id: 'asda234d213as'
 },
-{
-  destino: 'dado',
-  quantia: 'dado',
-  tipo: 'dado',
-  id: 'asdfdasdas'
+  {
+  destino: 'Hisrael',
+  quantia: '15,13',
+  tipo: 'enviada',
+  id: 'asdasasd13as'
+},
+  {
+  destino: 'Hisrael',
+  quantia: '15,13',
+  tipo: 'recebida',
+  id: 'asdasd654213as'
+},
+  {
+  destino: 'Hisrael',
+  quantia: '15,13',
+  tipo: 'enviada',
+  id: 'asdasd98763as'
 },
 ]
 
@@ -47,7 +59,7 @@ const mainColor = '#242424';
 
 
 export default function Home({navigation}){
-    const name = 'Hisrael';
+    const name = 'Marcelly';
     const saldo = 'R$ 283,99';
     
     return(
@@ -67,10 +79,10 @@ export default function Home({navigation}){
                   <TouchableOpacity onPress={() => navigation.navigate('PixMenu')} activeOpacity={1} underlayColor="#707CEA">
                     <Image source={require('../../assets/pix.png')} style={{width: 40, height: 40, marginBottom: 0, paddingLeft: 5}}></Image>
                   </TouchableOpacity>
-                  <TouchableOpacity>
+                  <TouchableOpacity onPress={() => alert('Ainda não implementado!')}>
                     <Ionicons name={'barcode-outline'} size={40} color={'#fff'}/>
                   </TouchableOpacity>
-                  <TouchableOpacity>
+                  <TouchableOpacity onPress={() => navigation.navigate('CardMenu')}>
                     <Ionicons name={'card-outline'} size={40} color={'#fff'}/>
                   </TouchableOpacity>
                 </View>
@@ -79,6 +91,7 @@ export default function Home({navigation}){
 
             </View>
           <ScrollView style={styles.view2}>
+            <Text style={{fontSize: 20, padding: 15}}>Histórico de transações</Text>
             {
               data.map(item => (
                 <Transaction destino={item.destino} quantia={item.quantia} tipo={item.tipo} key={item.id}/>

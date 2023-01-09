@@ -27,8 +27,8 @@ export default function Profile({navigation}){
             <View style={styles.view2}>
 
                 <View style={{width: '100%', backgroundColor: '#f0f0f5'}}>
-                    <ProfileData label={'Nome'} value={'Hisrael da Silva Braga'} changeable={'true'}></ProfileData>
-                    <ProfileData label={'Email'} value={'hisraelc@gmail.com'} changeable={'true'}></ProfileData>
+                    <ProfileData label={'Nome'} value={'Hisrael da Silva Braga'}></ProfileData>
+                    <ProfileData label={'Email'} value={'hisraelc@gmail.com'}></ProfileData>
                     <ProfileData label={'Data de Nascimento'} value={'23/02/2003'}></ProfileData>
                     <ProfileData label={'Membro desde'} value={'12/12/2022'}></ProfileData>
                 </View>

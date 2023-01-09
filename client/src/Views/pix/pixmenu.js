@@ -1,5 +1,4 @@
 import { View, Text, StyleSheet, Linking, Image, TouchableOpacity } from "react-native";
-import Ionicons from 'react-native-vector-icons/Ionicons';
 import Header from "../../Components/header";
 import PixButton from "../../Components/pixbutton";
 
@@ -19,9 +18,9 @@ export default function PixMenu({navigation}){
                 <View style={styles.view21}>
                     <PixButton texto={'Enviar Pix'} color={'black'} icon={'paper-plane-outline'} navigation={navigation} onpress={'SendPix'}></PixButton>
                     <View style={{marginTop: 50, marginBottom: 50}}>
-                        <PixButton texto={'Chaves Pix'} color={'black'} icon={'key-outline'} navigation={navigation}></PixButton>
+                        <PixButton texto={'Chaves Pix'} color={'black'} icon={'key-outline'} navigation={navigation} onpress={'KeysMenu'}></PixButton>
                     </View>
-                    <PixButton texto={'QR Code'} color={'black'} icon={'qr-code-outline'} navigation={navigation}></PixButton>
+                    <PixButton texto={'QR Code'} color={'black'} icon={'qr-code-outline'} navigation={navigation} onpress={'QRCode'}></PixButton>
 
                 </View>
             </View>

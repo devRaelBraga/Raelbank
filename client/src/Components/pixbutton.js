@@ -6,7 +6,7 @@ import Ionicons from 'react-native-vector-icons/Ionicons';
 export default function PixButton({texto, icon, color, onpress, navigation}){
     return(
         <View style={styles.view1}>
-            <TouchableHighlight underlayColor="#fff" onPress={() => navigation.navigate(onpress)}>
+            <TouchableHighlight underlayColor="#fff" onPress={() => func(onpress, navigation)}>
                 <View style={styles.view11}>
                     <Ionicons name={icon} size={50} color={color} style={{ width: '30%'}}/>
                     <Text style={styles.text} >{texto}</Text>
@@ -15,6 +15,9 @@ export default function PixButton({texto, icon, color, onpress, navigation}){
         </View>   
     )
 }
+
+const func = (onpress, navigation) => onpress == 'QRCode' ?  alert('Ainda não implementado') :navigation.navigate(onpress)
+
 
 const styles = StyleSheet.create({
     view1:{
