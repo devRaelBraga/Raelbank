@@ -75,8 +75,8 @@ $ yarn start
 <br/>
 
 # Diagrams
-## [UseCase Diagram](https://i.imgur.com/wY3z9rZ.png)
-![UseCase Diagram](https://i.imgur.com/wY3z9rZ.png)
+## [UseCase Diagram](https://i.imgur.com/Fa4pzWB.png)
+![UseCase Diagram](https://i.imgur.com/Fa4pzWB.png)
 
 ## [Class Diagram](https://i.imgur.com/QEwOJT2.png)
 ![Class Diagram](https://i.imgur.com/QEwOJT2.png)
